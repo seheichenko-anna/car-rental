@@ -1,0 +1,10 @@
+.nav {
+    padding: 16px 8px;
+    background-color: #3470FF;
+    display: flex;
+    color: #fff;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+}

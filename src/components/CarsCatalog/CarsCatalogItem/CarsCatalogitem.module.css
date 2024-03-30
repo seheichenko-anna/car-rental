@@ -1,0 +1,93 @@
+.car_card {
+    display: flex;
+    flex-direction: column;
+    width: 274px;
+    /* height: 426px; */
+    color: #121417;
+
+}
+
+.title_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.title_wrapper h2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.model {
+    color: #3470FF;
+}
+
+.list {
+    font-size: 12px;
+    color: #121417;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    margin-bottom: 28px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.list li {
+    padding: 0 6px;
+    border-right: 1px solid rgb(18, 20, 23, 0.5);
+    align-items: center;
+}
+
+
+.img {
+    border-radius: 14px;
+    height: 268px;
+    object-fit: cover;
+    margin-bottom: 14px;
+
+}
+
+.img_wrapper {
+    position: relative;
+}
+
+.btn_learn_more {
+    padding: 12px;
+    border: transparent;
+    background-color: #3470FF;
+    color: #fff;
+    font-family: inherit;
+    border-radius: 14px;
+
+    &:hover {
+        background-color: #0B44CD;
+    }
+}
+
+.icon_heart {
+    width: 18px;
+    height: 16px;
+    fill: none;
+    stroke: #fff;
+}
+
+.icon_heart_fill {
+    fill: #3470FF;
+    width: 18px;
+    height: 16px;
+    stroke: #3470FF;
+}
+
+.btn_favorite {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+}
