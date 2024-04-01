@@ -10,7 +10,7 @@ import Modal from '../../Modal/Modal';
 import ModalContent from '../../ModalContent/ModalContent';
 import Button from '../../Buttons/Button';
 import imageNotFound from '../../../assets/image-not-found.jpg';
-import sprite from '/assets/sprite.svg';
+import sprite from '/sprite.svg';
 import s from './CarsCatalogitem.module.css';
 
 const CarsCatalogItem = ({ car }) => {
