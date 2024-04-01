@@ -34,7 +34,23 @@ img {
   height: auto;
 }
 
+:root {
+  --accent-color: #3470ff;
+  --black-color: #121417,
+}
+
 body {
   font-family: "Manrope", sans-serif;
+  color: var(--black-color);
+
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
+.active {
+  /* text-shadow: white 0 0 10px; */
+  color: yellow;
 
 }

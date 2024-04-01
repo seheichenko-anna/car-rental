@@ -7,6 +7,29 @@ const initialState = {
   error: null,
   isLoadMoreCars: true,
   currentPage: 1,
+  makes: [
+    'Buick',
+    'Volvo',
+    'HUMMER',
+    'Subaru',
+    'Mitsubishi',
+    'Nissan',
+    'Lincoln',
+    'GMC',
+    'Hyundai',
+    'MINI',
+    'Bentley',
+    'Mercedes-Benz',
+    'Aston Martin',
+    'Pontiac',
+    'Lamborghini',
+    'Audi',
+    'BMW',
+    'Chevrolet',
+    'Chrysler',
+    'Kia',
+    'Land',
+  ],
 };
 const slice = createSlice({
   name: 'cars',
@@ -16,6 +39,7 @@ const slice = createSlice({
     selectIsLoading: state => state.isLoading,
     selectIsLoadMoreCars: state => state.isLoadMoreCars,
     selectCurrentPage: state => state.currentPage,
+    selectMakes: state => state.makes,
   },
   extraReducers: builder => {
     builder
@@ -55,4 +79,5 @@ export const {
   selectIsLoading,
   selectIsLoadMoreCars,
   selectCurrentPage,
+  selectMakes,
 } = slice.selectors;

@@ -1,12 +1,17 @@
 import React from 'react';
-import s from './CarsCatalogitem.module.css';
-import sprite from '../../../assets/sprite.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   addToFavorites,
   removeFromFavorites,
   selectFavorites,
 } from '../../../redux/favorites/favoritesSlice';
+import { useModal } from '../../../hooks/useModal';
+import Modal from '../../Modal/Modal';
+import ModalContent from '../../ModalContent/ModalContent';
+import Button from '../../Buttons/Button';
+import imageNotFound from '../../../assets/image-not-found.jpg';
+import sprite from '../../../assets/sprite.svg';
+import s from './CarsCatalogitem.module.css';
 
 const CarsCatalogItem = ({ car }) => {
   const {
@@ -16,22 +21,17 @@ const CarsCatalogItem = ({ car }) => {
     model,
     type,
     img,
-    description,
-    fuelConsumption,
-    engineSize,
     accessories,
-    functionalities,
     rentalPrice,
     rentalCompany,
     address,
-    rentalConditions,
     mileage,
   } = car;
 
   const city = address.split(',')[1];
   const country = address.split(',')[2];
   const favorites = useSelector(selectFavorites);
-
+  const { isOpen, toggle } = useModal();
   const isFavorite = favorites.some(favorite => favorite.id === id);
   const dispatch = useDispatch();
 
@@ -46,7 +46,11 @@ const CarsCatalogItem = ({ car }) => {
   return (
     <div className={s.car_card}>
       <div className={s.img_wrapper}>
-        <img src={img} alt={`${make} ${model}`} className={s.img} />
+        <img
+          src={img || imageNotFound}
+          alt={`${make} ${model}`}
+          className={s.img}
+        />
         <button className={s.btn_favorite} onClick={handleToggleFavorite}>
           <svg className={isFavorite ? s.icon_heart_fill : s.icon_heart}>
             <use xlinkHref={`${sprite}#heart`} />
@@ -56,7 +60,7 @@ const CarsCatalogItem = ({ car }) => {
       <div className={s.title_wrapper}>
         <h2 className={s.title}>
           <span>{make} </span>
-          <span className={s.model}>{model}, </span>
+          <span className="accent">{model}, </span>
           <span>{year}</span>
         </h2>
         <p className={s.price}>{rentalPrice}</p>
@@ -70,7 +74,12 @@ const CarsCatalogItem = ({ car }) => {
         <li>{mileage}</li>
         <li>{accessories[0]}</li>
       </ul>
-      <button className={s.btn_learn_more}>Learn more</button>
+      <Button onClick={toggle}>Learn more</Button>
+      {isOpen && (
+        <Modal closeModal={toggle}>
+          <ModalContent car={car} />
+        </Modal>
+      )}
     </div>
   );
 };

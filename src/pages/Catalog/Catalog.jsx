@@ -6,7 +6,7 @@ import { fetchCarsThunk } from '../../redux/cars/operations';
 const Catalog = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchCarsThunk());
+    dispatch(fetchCarsThunk({ page: 1, make: null }));
   }, [dispatch]);
 
   return <CarsCatalog type="catalog" />;

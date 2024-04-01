@@ -2,9 +2,6 @@
     display: flex;
     flex-direction: column;
     width: 274px;
-    /* height: 426px; */
-    color: #121417;
-
 }
 
 .title_wrapper {
@@ -14,11 +11,15 @@
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 8px;
+    gap: 12px
 }
 
 .title_wrapper h2 {
     font-size: 16px;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .model {
@@ -27,7 +28,6 @@
 
 .list {
     font-size: 12px;
-    color: #121417;
     opacity: 0.5;
     display: flex;
     align-items: center;
@@ -36,6 +36,7 @@
     margin-bottom: 28px;
     height: 40px;
     overflow: hidden;
+    margin-left: -6px;
 }
 
 .list li {
@@ -50,25 +51,13 @@
     height: 268px;
     object-fit: cover;
     margin-bottom: 14px;
-
+    width: 274px;
 }
 
 .img_wrapper {
     position: relative;
 }
 
-.btn_learn_more {
-    padding: 12px;
-    border: transparent;
-    background-color: #3470FF;
-    color: #fff;
-    font-family: inherit;
-    border-radius: 14px;
-
-    &:hover {
-        background-color: #0B44CD;
-    }
-}
 
 .icon_heart {
     width: 18px;
