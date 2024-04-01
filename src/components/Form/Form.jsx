@@ -66,15 +66,26 @@ const Form = ({ make, setMake }) => {
   return (
     <div className={s.form_wrapper}>
       <form onSubmit={handleSubmit} className={s.form}>
-        <Select
-          options={makes.map(make => ({ value: make, label: make }))}
-          onChange={handleSelectChange}
-          placeholder="Enter the text"
-          styles={customStyles}
-          classNamePrefix="select"
-          className={s.select}
-        />
-        <Button style={{ padding: '14px 44px' }}>Search</Button>
+        <label className={s.label}>
+          Car brand
+          <Select
+            options={makes.map(make => ({ value: make, label: make }))}
+            onChange={handleSelectChange}
+            placeholder="Enter the text"
+            styles={customStyles}
+            classNamePrefix="select"
+            className={s.select}
+          />
+        </label>
+        <Button
+          style={{
+            padding: '14px 44px',
+            alignSelf: ' flex-end',
+            height: '48px',
+          }}
+        >
+          Search
+        </Button>
       </form>
     </div>
   );
