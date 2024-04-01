@@ -91,7 +91,9 @@ const ModalContent = ({ car }) => {
           </li>
         </ul>
       </div>
-      <Button style={{ alignSelf: 'flex-start' }}>Rental car</Button>
+      <a href="tel:+380730000000">
+        <Button style={{ alignSelf: 'flex-start' }}>Rental car</Button>
+      </a>
     </div>
   );
 };

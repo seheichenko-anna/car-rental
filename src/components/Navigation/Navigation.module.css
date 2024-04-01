@@ -1,6 +1,6 @@
 .nav {
     padding: 8px 20px;
-    background-color: #3470FF;
+    background-color: var(--accent-color);
     display: flex;
     color: #fff;
     justify-content: space-between;

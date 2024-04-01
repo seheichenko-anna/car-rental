@@ -36,7 +36,8 @@ img {
 
 :root {
   --accent-color: #3470ff;
-  --black-color: #121417,
+  --black-color: #121417;
+  --hover-color: #0B44CD
 }
 
 body {
@@ -50,7 +51,5 @@ body {
 }
 
 .active {
-  /* text-shadow: white 0 0 10px; */
   color: yellow;
-
 }

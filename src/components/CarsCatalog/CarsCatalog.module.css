@@ -20,13 +20,13 @@
     font-size: 16px;
     line-height: 1.5;
     text-decoration: underline;
-    color: #3470ff;
+    color: var(--accent-color);
     background-color: transparent;
     border: none;
     transition: color 0.3s ease-in-out;
 
     &:hover {
-        color: #0B44CD;
+        color: var(--hover-color);
     }
 
 }
