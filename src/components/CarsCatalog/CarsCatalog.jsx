@@ -32,11 +32,13 @@ const CarsCatalog = ({ type }) => {
             <CarsCatalogItem car={car} key={car.id} />
           ))}
         </div>
-        {type === 'catalog' && currentPage < maxPage && (
-          <button type="button" onClick={getMoreCars} className={s.load_more}>
-            Load more
-          </button>
-        )}
+        {type === 'catalog' &&
+          currentPage < maxPage &&
+          mapCars.length >= 12 && (
+            <button type="button" onClick={getMoreCars} className={s.load_more}>
+              Load more
+            </button>
+          )}
       </section>
     </>
   );
