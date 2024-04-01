@@ -5,7 +5,6 @@ const initialState = {
   cars: [],
   isLoading: false,
   error: null,
-  // isLoadMoreCars: true,
   currentPage: 1,
   makes: [
     'Buick',
@@ -61,7 +60,6 @@ const slice = createSlice({
       })
       .addCase(fetchMoreCarsThunk.fulfilled, (state, { payload }) => {
         state.cars = [...state.cars, ...payload];
-        // state.isLoadMoreCars = payload.length > 0;
         state.currentPage = state.currentPage + 1;
         state.isLoading = false;
       })
