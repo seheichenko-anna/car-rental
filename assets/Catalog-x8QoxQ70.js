@@ -1,0 +1,1 @@
+import{u as t,r as s,f as r,j as o}from"./index-lW2vM8vx.js";import{C as e}from"./CarsCatalog-CLkkdSQJ.js";import"./Button-Q8zl3Rjj.js";const f=()=>{const a=t();return s.useEffect(()=>{a(r({page:1,make:null}))},[a]),o.jsx(e,{type:"catalog"})};export{f as default};
