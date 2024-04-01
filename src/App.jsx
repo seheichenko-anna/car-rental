@@ -1,7 +1,6 @@
 import { lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
-import NotFound from './pages/NotFound/NotFound';
 const Catalog = lazy(() => import('./pages/Catalog/Catalog'));
 const Favorites = lazy(() => import('./pages/Favorites/Favorites'));
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -15,7 +14,7 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/favorites" element={<Favorites />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
   );
