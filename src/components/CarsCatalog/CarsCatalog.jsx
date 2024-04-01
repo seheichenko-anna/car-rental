@@ -5,7 +5,6 @@ import { fetchMoreCarsThunk } from '../../redux/cars/operations';
 import { selectFavorites } from '../../redux/favorites/favoritesSlice';
 import CarsCatalogItem from './CarsCatalogItem/CarsCatalogItem';
 import Form from '../Form/Form';
-
 import s from './CarsCatalog.module.css';
 
 const CarsCatalog = ({ type }) => {
